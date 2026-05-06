@@ -8,7 +8,7 @@
 
     <style>
       
-   /* ===== BASE ===== */
+ 
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, sans-serif;
@@ -16,7 +16,7 @@ body {
     color: #333;
 }
 
-/* ===== NAVBAR ===== */
+
 .navbar {
     position: sticky;
     top: 0;
@@ -33,20 +33,20 @@ body {
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-/* NAV LEFT */
+
 .navbar h2 {
     margin: 0;
     font-size: 22px;
 }
 
-/* CENTER SEARCH */
+
 .navbar-center {
     flex: 1;
     display: flex;
     justify-content: center;
 }
 
-/* RIGHT */
+
 .navbar a {
     color: #3c000b;
     background: white;
@@ -61,7 +61,7 @@ body {
     background: #f2dede;
 }
 
-/* ===== SEARCH ===== */
+
 #search {
     width: 350px;
     padding: 10px 18px;
@@ -75,7 +75,7 @@ body {
     box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
-/* ===== PRODUCT GRID ===== */
+
 .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -83,7 +83,7 @@ body {
     padding: 30px;
 }
 
-/* ===== CARD ===== */
+
 .card {
     background: white;
     border-radius: 16px;
@@ -109,7 +109,7 @@ body {
     border-radius: 12px;
 }
 
-/* PRODUCT TEXT */
+
 .card h3 {
     margin: 10px 0 5px;
 }
@@ -125,14 +125,14 @@ body {
     color: #3c000b;
 }
 
-/* ===== LINKS ===== */
+
 a {
     text-decoration: none;
     color: #3c000b;
     font-weight: 600;
 }
 
-/* ===== BUTTON ===== */
+
 .btn {
     padding: 10px;
     background: #3c000b;
@@ -150,7 +150,7 @@ a {
     background: #5a0015;
 }
 
-/* ===== QTY BOX ===== */
+
 .qty-box {
     display: flex;
     justify-content: center;
@@ -180,7 +180,7 @@ a {
     font-weight: bold;
 }
 
-/* ===== SMALL POLISH ===== */
+
 .card a {
     font-size: 14px;
     margin-top: 5px;
@@ -219,7 +219,7 @@ a {
 
         <br><br>
 
-        <!-- FIX: safer JS passing -->
+      
       <div class="qty-box">
     <button onclick="changeQty(this, -1)">−</button>
 
@@ -261,7 +261,7 @@ function addToCartFromBtn(btn) {
     let name = btn.getAttribute("data-name");
     let price = Number(btn.getAttribute("data-price"));
 
-    // 🔥 get quantity from input
+   
    let card = btn.closest(".card");
 let qtyInput = card.querySelector(".qty-input");
     let qty = parseInt(qtyInput.value);
@@ -271,7 +271,7 @@ let qtyInput = card.querySelector(".qty-input");
     let existing = cart.find(item => item.id === id);
 
     if (existing) {
-        existing.qty += qty; // 🔥 add selected quantity
+        existing.qty += qty; 
     } else {
         cart.push({
             id: id,
@@ -285,7 +285,7 @@ let qtyInput = card.querySelector(".qty-input");
 
     alert("Added to cart!");
 }
-// SEARCH FUNCTION
+
 function searchProducts() {
     let input = document.getElementById("search").value.toLowerCase();
     let cards = document.getElementsByClassName("card");

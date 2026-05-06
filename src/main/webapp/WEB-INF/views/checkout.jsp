@@ -5,7 +5,7 @@
     <title>Checkout</title>
 
     <style>
-    /* ===== BASE ===== */
+    
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, sans-serif;
@@ -16,7 +16,7 @@ body {
     height: 100vh;
 }
 
-/* ===== CONTAINER ===== */
+
 .container {
     width: 380px;
     background: white;
@@ -28,14 +28,14 @@ body {
     animation: fadeIn 0.4s ease;
 }
 
-/* TITLE */
+
 .container h2 {
     text-align: center;
     color: #3c000b;
     margin-bottom: 20px;
 }
 
-/* ===== INPUTS ===== */
+
 input, textarea {
     width: 100%;
     padding: 12px;
@@ -50,20 +50,20 @@ input, textarea {
     transition: 0.3s;
 }
 
-/* FOCUS EFFECT */
+
 input:focus, textarea:focus {
     border-color: #3c000b;
     box-shadow: 0 0 0 2px rgba(60,0,11,0.1);
     outline: none;
 }
 
-/* TEXTAREA */
+
 textarea {
     resize: none;
     height: 80px;
 }
 
-/* ===== BUTTON ===== */
+
 button {
     margin-top: 15px;
     padding: 12px;
@@ -87,14 +87,14 @@ button:hover {
     transform: translateY(-2px);
 }
 
-/* ===== ERRORS ===== */
+
 .error {
     color: #d93025;
     font-size: 13px;
     margin-bottom: 5px;
 }
 
-/* ===== SUCCESS ===== */
+
 .success {
     text-align: center;
     color: #3c000b;
@@ -112,7 +112,7 @@ button:hover {
     border-radius: 20px;
 }
 
-/* ===== ANIMATION ===== */
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -194,14 +194,14 @@ function placeOrder() {
         return;
     }
 
-    // simulate order success
+  
     localStorage.removeItem("cart");
 
     document.getElementById("formSection").style.display = "none";
 
     document.getElementById("successMessage").innerHTML =
         "✅ Order placed successfully! <br><br>" +
-        "<a href='${pageContext.request.contextPath}/'>Go back to shop</a>";
+        "<a href='${pageContext.request.contextPath}/'>back to shop</a>";
 }
 
 </script>

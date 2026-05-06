@@ -13,7 +13,7 @@ body {
     color: #333;
 }
 
-/* ===== HEADER ===== */
+
 .top {
     text-align: center;
     padding: 20px;
@@ -30,7 +30,7 @@ body {
     font-weight: bold;
 }
 
-/* ===== TABLE CONTAINER ===== */
+
 table {
     width: 85%;
     margin: 20px auto;
@@ -43,7 +43,7 @@ table {
     box-shadow: 0 6px 20px rgba(0,0,0,0.08);
 }
 
-/* HEADER */
+
 th {
     background: #3c000b;
     color: white;
@@ -51,18 +51,18 @@ th {
     font-weight: 600;
 }
 
-/* CELLS */
+
 td {
     padding: 12px;
     border-bottom: 1px solid #eee;
 }
 
-/* ROW HOVER */
+
 tr:hover {
     background: #fafafa;
 }
 
-/* ===== BUTTON ===== */
+
 button {
     padding: 6px 12px;
     background: #3c000b;
@@ -77,20 +77,20 @@ button{
     background: #5a0015;
 }
 
-/* ===== TOTAL ===== */
+
 #grandTotal {
     color: #3c000b;
     font-weight: bold;
 }
 
-/* TOTAL SECTION */
+
 h3 {
     text-align: center;
     margin-top: 25px;
     font-size: 20px;
 }
 
-/* ===== CHECKOUT BUTTON ===== */
+
 .checkout-btn {
     padding: 12px 25px;
     background: #3c000b;
@@ -108,7 +108,7 @@ h3 {
     transform: translateY(-2px);
 }
 
-/* CENTER WRAPPER */
+
 .checkout-wrap {
     text-align: center;
     margin: 25px 0 40px;
@@ -119,8 +119,8 @@ h3 {
 <body>
 
 <div class="top">
-    <h2>🛒 Your Cart</h2>
-    <a href="${pageContext.request.contextPath}/">⬅ Continue Shopping</a>
+    <h2>🛒 Cart</h2>
+    <a href="${pageContext.request.contextPath}/"> Continue Shopping</a>
 </div>
 
 <table>
@@ -151,7 +151,7 @@ h3 {
 
 function loadCart() {
 
-    // ✅ SAFE parsing (prevents crashes)
+    
     let cart = JSON.parse(localStorage.getItem("cart") || "[]");
     let table = document.getElementById("cartTable");
 
@@ -167,7 +167,7 @@ function loadCart() {
 
         grandTotal += total;
 
-        // ✅ safer HTML build (no template literal issues in JSP)
+       
         let row =
             "<tr>" +
                 "<td>" + (item.name || "N/A") + "</td>" +
@@ -194,7 +194,7 @@ function removeItem(index) {
     loadCart();
 }
 
-// INIT
+
 loadCart();
 
 </script>
