@@ -5,30 +5,114 @@
     <title>Cart</title>
 
     <style>
-        table {
-            width: 80%;
-            margin: auto;
-            border-collapse: collapse;
-        }
+     
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: #fffff0;
+    color: #333;
+}
 
-        th, td {
-            padding: 10px;
-            border: 1px solid #ccc;
-            text-align: center;
-        }
+/* ===== HEADER ===== */
+.top {
+    text-align: center;
+    padding: 20px;
+}
 
-        .btn {
-            padding: 5px 10px;
-            background: red;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
+.top h2 {
+    margin-bottom: 10px;
+    color: #3c000b;
+}
 
-        .top {
-            text-align: center;
-            margin: 20px;
-        }
+.top a {
+    text-decoration: none;
+    color: #3c000b;
+    font-weight: bold;
+}
+
+/* ===== TABLE CONTAINER ===== */
+table {
+    width: 85%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: white;
+
+    border-radius: 12px;
+    overflow: hidden;
+
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+/* HEADER */
+th {
+    background: #3c000b;
+    color: white;
+    padding: 14px;
+    font-weight: 600;
+}
+
+/* CELLS */
+td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+/* ROW HOVER */
+tr:hover {
+    background: #fafafa;
+}
+
+/* ===== BUTTON ===== */
+button {
+    padding: 6px 12px;
+    background: #3c000b;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button{
+    background: #5a0015;
+}
+
+/* ===== TOTAL ===== */
+#grandTotal {
+    color: #3c000b;
+    font-weight: bold;
+}
+
+/* TOTAL SECTION */
+h3 {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 20px;
+}
+
+/* ===== CHECKOUT BUTTON ===== */
+.checkout-btn {
+    padding: 12px 25px;
+    background: #3c000b;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.checkout-btn:hover {
+    background: #5a0015;
+    transform: translateY(-2px);
+}
+
+/* CENTER WRAPPER */
+.checkout-wrap {
+    text-align: center;
+    margin: 25px 0 40px;
+}
     </style>
 </head>
 

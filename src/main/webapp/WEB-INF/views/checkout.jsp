@@ -5,38 +5,124 @@
     <title>Checkout</title>
 
     <style>
-        .container {
-            width: 400px;
-            margin: auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-        }
+    /* ===== BASE ===== */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: #fffff0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 
-        input, textarea {
-            width: 100%;
-            padding: 8px;
-            margin: 10px 0;
-        }
+/* ===== CONTAINER ===== */
+.container {
+    width: 380px;
+    background: white;
+    padding: 25px;
 
-        button {
-            padding: 10px;
-            width: 100%;
-            background: green;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 
-        .error {
-            color: red;
-            font-size: 14px;
-        }
+    animation: fadeIn 0.4s ease;
+}
 
-        .success {
-            text-align: center;
-            color: green;
-            font-size: 20px;
-        }
+/* TITLE */
+.container h2 {
+    text-align: center;
+    color: #3c000b;
+    margin-bottom: 20px;
+}
+
+/* ===== INPUTS ===== */
+input, textarea {
+    width: 100%;
+    padding: 12px;
+
+    border-radius: 10px;
+    border: 1px solid #ddd;
+
+    margin-top: 10px;
+    margin-bottom: 5px;
+
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+/* FOCUS EFFECT */
+input:focus, textarea:focus {
+    border-color: #3c000b;
+    box-shadow: 0 0 0 2px rgba(60,0,11,0.1);
+    outline: none;
+}
+
+/* TEXTAREA */
+textarea {
+    resize: none;
+    height: 80px;
+}
+
+/* ===== BUTTON ===== */
+button {
+    margin-top: 15px;
+    padding: 12px;
+
+    width: 100%;
+    border: none;
+    border-radius: 25px;
+
+    background: #3c000b;
+    color: white;
+
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #5a0015;
+    transform: translateY(-2px);
+}
+
+/* ===== ERRORS ===== */
+.error {
+    color: #d93025;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+/* ===== SUCCESS ===== */
+.success {
+    text-align: center;
+    color: #3c000b;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.success a {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    background: #3c000b;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}   
     </style>
 </head>
 
