@@ -7,127 +7,187 @@
     <title>Mobile Store</title>
 
     <style>
-       <style>
-    /* ===== BASE ===== */
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: #ffffff;
-    }
+      
+   /* ===== BASE ===== */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: #fffff0;
+    color: #333;
+}
 
-    /* ===== NAVBAR ===== */
-    .navbar {
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 12px 20px;
-        background: red;
-        color: white;
-        transition: 0.3s ease;
-    }
+/* ===== NAVBAR ===== */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 
-    .navbar.transparent {
-        background: rgba(255, 0, 0, 0.75);
-        backdrop-filter: blur(8px);
-    }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-    .logo {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        font-size: 20px;
-        font-weight: bold;
-    }
+    padding: 14px 30px;
+    background: #3c000b;
+    color: white;
 
-    .logo img {
-        width: 35px;
-        height: 35px;
-    }
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
 
-    .cart-btn {
-        background: white;
-        color: red;
-        padding: 8px 14px;
-        border-radius: 20px;
-        text-decoration: none;
-        font-weight: bold;
-        transition: 0.3s;
-    }
+/* NAV LEFT */
+.navbar h2 {
+    margin: 0;
+    font-size: 22px;
+}
 
-    .cart-btn:hover {
-        background: #ffe5e5;
-    }
+/* CENTER SEARCH */
+.navbar-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
 
-    /* ===== SEARCH ===== */
-    #search {
-        width: 300px;
-        padding: 10px;
-        margin: 20px;
-        border: 2px solid red;
-        border-radius: 20px;
-        outline: none;
-    }
+/* RIGHT */
+.navbar a {
+    color: #3c000b;
+    background: white;
+    padding: 8px 16px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
 
-    /* ===== PRODUCT GRID ===== */
-    .container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        padding: 20px;
-        justify-content: center;
-    }
+.navbar a:hover {
+    background: #f2dede;
+}
 
-    /* ===== CARD ===== */
-    .card {
-        width: 220px;
-        border: 2px solid red;
-        padding: 12px;
-        border-radius: 14px;
-        text-align: center;
-        background: white;
-        transition: 0.3s ease;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    }
+/* ===== SEARCH ===== */
+#search {
+    width: 350px;
+    padding: 10px 18px;
 
-    .card:hover {
-        transform: translateY(-5px);
-    }
+    border-radius: 25px;
+    border: none;
 
-    .card img {
-        width: 100%;
-        height: 150px;
-        object-fit: cover;
-        border-radius: 10px;
-    }
+    outline: none;
+    font-size: 14px;
 
-    /* ===== MODERN BUTTON ===== */
-    .btn {
-        padding: 8px 12px;
-        background: white;
-        color: red;
-        border: 2px solid red;
-        border-radius: 20px;
-        cursor: pointer;
-        margin-top: 8px;
-        transition: 0.3s;
-        font-weight: bold;
-    }
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
 
-    .btn:hover {
-        background: red;
-        color: white;
-    }
+/* ===== PRODUCT GRID ===== */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    padding: 30px;
+}
 
-    a {
-        text-decoration: none;
-        color: red;
-        font-weight: bold;
-    }
+/* ===== CARD ===== */
+.card {
+    background: white;
+    border-radius: 16px;
+    padding: 15px;
+
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: all 0.25s ease;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* PRODUCT TEXT */
+.card h3 {
+    margin: 10px 0 5px;
+}
+
+.card p {
+    font-size: 13px;
+    color: #666;
+    min-height: 40px;
+}
+
+.card h4 {
+    margin: 8px 0;
+    color: #3c000b;
+}
+
+/* ===== LINKS ===== */
+a {
+    text-decoration: none;
+    color: #3c000b;
+    font-weight: 600;
+}
+
+/* ===== BUTTON ===== */
+.btn {
+    padding: 10px;
+    background: #3c000b;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 10px;
+
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #5a0015;
+}
+
+/* ===== QTY BOX ===== */
+.qty-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.qty-box button {
+    padding: 6px 12px;
+    border: none;
+    background: #3c000b;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.qty-box button:hover {
+    background: #5a0015;
+}
+
+.qty-input {
+    width: 45px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+/* ===== SMALL POLISH ===== */
+.card a {
+    font-size: 14px;
+    margin-top: 5px;
+    display: inline-block;
+}
 </style>
-    </style>
+    
 </head>
 
 <body>
@@ -160,7 +220,17 @@
         <br><br>
 
         <!-- FIX: safer JS passing -->
-       <button class="btn"
+      <div class="qty-box">
+    <button onclick="changeQty(this, -1)">−</button>
+
+    <input type="text" value="1" class="qty-input" readonly>
+
+    <button onclick="changeQty(this, 1)">+</button>
+</div>
+
+<br>
+
+<button class="btn"
         data-id="${p.id}"
         data-name="${p.name}"
         data-price="${p.price}"
@@ -174,26 +244,40 @@
 </div>
 
 <script>
+function changeQty(btn, change) {
+    let input = btn.parentElement.querySelector(".qty-input");
 
-// CLEAN & SAFE CART FUNCTION
+    let current = parseInt(input.value);
+
+    current += change;
+
+    if (current < 1) current = 1;
+
+    input.value = current;
+}
 function addToCartFromBtn(btn) {
 
     let id = Number(btn.getAttribute("data-id"));
     let name = btn.getAttribute("data-name");
     let price = Number(btn.getAttribute("data-price"));
 
+    // 🔥 get quantity from input
+   let card = btn.closest(".card");
+let qtyInput = card.querySelector(".qty-input");
+    let qty = parseInt(qtyInput.value);
+
     let cart = JSON.parse(localStorage.getItem("cart") || "[]");
 
     let existing = cart.find(item => item.id === id);
 
     if (existing) {
-        existing.qty += 1;
+        existing.qty += qty; // 🔥 add selected quantity
     } else {
         cart.push({
             id: id,
             name: name,
             price: price,
-            qty: 1
+            qty: qty
         });
     }
 
