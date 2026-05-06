@@ -37,9 +37,10 @@
 
 <div class="container">
 
-    <img src="${product.image}" alt="product"/>
+    <img src="${pageContext.request.contextPath}/static/images/${product.image}" alt="product"/>
 
     <div class="details">
+    
         <h2>${product.name}</h2>
 
         <p>${product.description}</p>

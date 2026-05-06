@@ -8,9 +8,9 @@
     
 body {
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, sans-serif;
-    background: #fffff0;
-    display: flex;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: #fffff0;
+   display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -116,12 +116,10 @@ button:hover {
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(20px);
-    }
+        transform: translateY(20px); }
     to {
         opacity: 1;
-        transform: translateY(0);
-    }
+        transform: translateY(0);}
 }   
     </style>
 </head>
@@ -134,20 +132,17 @@ button:hover {
 
     <div id="formSection">
 
-        <input type="text" id="name" placeholder="Full Name">
-        <div id="nameError" class="error"></div>
+    <input type="text" id="name" placeholder="Full Name">
+  <div id="nameError" class="error"></div>
 
-        <textarea id="address" placeholder="Address"></textarea>
-        <div id="addressError" class="error"></div>
+  <textarea id="address" placeholder="Address"></textarea>
+  <div id="addressError" class="error"></div>
 
-        <input type="text" id="phone" placeholder="Phone Number">
-        <div id="phoneError" class="error"></div>
+  <input type="text" id="phone" placeholder="Phone Number">
+  <div id="phoneError" class="error"></div>
+<button onclick="placeOrder()">Place Order</button>
 
-        <button onclick="placeOrder()">Place Order</button>
-
-    </div>
-
-    <div id="successMessage" class="success"></div>
+    </div> <div id="successMessage" class="success"></div>
 
 </div>
 

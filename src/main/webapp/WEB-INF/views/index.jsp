@@ -8,8 +8,7 @@
 
     <style>
       
- 
-body {
+ body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, sans-serif;
     background: #fffff0;
@@ -26,17 +25,9 @@ body {
     align-items: center;
     justify-content: space-between;
 
-    padding: 14px 30px;
+    padding: 12px 20px;
     background: #3c000b;
     color: white;
-
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-
-.navbar h2 {
-    margin: 0;
-    font-size: 22px;
 }
 
 
@@ -46,145 +37,118 @@ body {
     justify-content: center;
 }
 
+#search {
+    width: 300px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 14px;
+}
+
 
 .navbar a {
     color: #3c000b;
     background: white;
-    padding: 8px 16px;
-    border-radius: 25px;
+    padding: 6px 12px;
     text-decoration: none;
     font-weight: bold;
-    transition: 0.3s;
-}
-
-.navbar a:hover {
-    background: #f2dede;
-}
-
-
-#search {
-    width: 350px;
-    padding: 10px 18px;
-
-    border-radius: 25px;
-    border: none;
-
-    outline: none;
-    font-size: 14px;
-
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
 
 .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 25px;
-    padding: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px;
 }
 
 
 .card {
     background: white;
-    border-radius: 16px;
-    padding: 15px;
-
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-    transition: all 0.25s ease;
-
+    padding: 10px;
+    border: 1px solid #ddd;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    
 }
 
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
 
 .card img {
     width: 100%;
-    height: 170px;
-    object-fit: cover;
-    border-radius: 12px;
+    height: 130px;
+    object-fit: contain;
 }
 
 
 .card h3 {
-    margin: 10px 0 5px;
+    margin: 8px 0 4px;
 }
 
 .card p {
-    font-size: 13px;
+    font-size: 12px;
     color: #666;
-    min-height: 40px;
 }
 
 .card h4 {
-    margin: 8px 0;
+    margin: 6px 0;
     color: #3c000b;
 }
 
-
-a {
-    text-decoration: none;
-    color: #3c000b;
-    font-weight: 600;
-}
-
-
+a{
+text-decoration:none;}
 .btn {
-    padding: 10px;
+    padding: 8px;
     background: #3c000b;
     color: white;
     border: none;
-    border-radius: 25px;
     cursor: pointer;
-    margin-top: 10px;
-
-    font-weight: bold;
-    transition: 0.3s;
+    margin-top: 8px;
 }
-
-.btn:hover {
-    background: #5a0015;
-}
-
 
 .qty-box {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 6px;
 }
 
 .qty-box button {
-    padding: 6px 12px;
+    padding: 4px 8px;
     border: none;
     background: #3c000b;
     color: white;
-    border-radius: 8px;
     cursor: pointer;
-    font-weight: bold;
-}
-
-.qty-box button:hover {
-    background: #5a0015;
 }
 
 .qty-input {
-    width: 45px;
+    width: 35px;
     text-align: center;
     border: 1px solid #ccc;
-    border-radius: 6px;
-    font-weight: bold;
 }
 
 
-.card a {
-    font-size: 14px;
-    margin-top: 5px;
-    display: inline-block;
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar-center {
+        width: 100%;
+    }
+
+    #search {
+        width: 90%;
+    }
+
+    .container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .card img {
+        height: 100px;
+    }
 }
 </style>
     
@@ -194,11 +158,13 @@ a {
 
 <div class="navbar" id="navbar">
     <h2>📱 Mobile Store</h2>
+
+    <div class="navbar-center">
+        <input type="text" id="search" placeholder="Search products..." onkeyup="searchProducts()">
+    </div>
+
     <a href="${pageContext.request.contextPath}/cart">Go to Cart 🛒</a>
 </div>
-
-<input type="text" id="search" placeholder="Search products..." onkeyup="searchProducts()">
-
 <br><br>
 
 <div class="container">
